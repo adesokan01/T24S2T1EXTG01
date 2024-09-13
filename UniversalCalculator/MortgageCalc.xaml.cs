@@ -61,11 +61,18 @@ namespace Calculator
 			monthlyInterestRate = yearlyInterestRate / 100 / 12;
 
 			// calculate monthly repayment
-			monthlyRepayment = principalBorrow * monthlyInterestRate * Math.Pow((1 + monthlyInterestRate), totalNumMonths) / (Math.Pow((1 + monthlyInterestRate), totalNumMonths) - 1);
+			// monthlyRepayment = principalBorrow * monthlyInterestRate * Math.Pow((1 + monthlyInterestRate), totalNumMonths) / (Math.Pow((1 + monthlyInterestRate), totalNumMonths) - 1);
+
+			monthlyRepayment = calculateLoanRepayment(principalBorrow, monthlyInterestRate, totalNumMonths);
 
 			// display monthly interest rate and monthly repayment
 			monthlyInterestRateTextBox.Text = monthlyInterestRate.ToString("F4") + "%";
 			monthlyRepaymentTextBox.Text = monthlyRepayment.ToString("F2");
+		}
+
+		private double calculateLoanRepayment(double principal, double monthlyRate, int months)
+		{
+			return principal * monthlyRate * Math.Pow((1 + monthlyRate), months) / (Math.Pow((1 + monthlyRate), months) - 1);
 		}
 	}
 }
