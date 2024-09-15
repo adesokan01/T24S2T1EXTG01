@@ -74,5 +74,10 @@ namespace Calculator
 		{
 			return principal * monthlyRate * Math.Pow((1 + monthlyRate), months) / (Math.Pow((1 + monthlyRate), months) - 1);
 		}
+
+		private void exitButton_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(MainMenu));
+		}
 	}
 }

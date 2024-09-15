@@ -109,7 +109,7 @@ namespace Calculator
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Exit(); // This line will need to be adjusted or removed
-        }
+			Frame.Navigate(typeof(MainMenu));
+		}
     }
 }
