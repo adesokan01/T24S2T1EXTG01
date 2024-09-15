@@ -2,14 +2,14 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace CurrencyConversion
+namespace Calculator
 {
     /// <summary>
     /// MainPage of the Currency Conversion application.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class CurrencyCalc : Page
     {
-        public MainPage()
+        public CurrencyCalc()
         {
             this.InitializeComponent();
         }
